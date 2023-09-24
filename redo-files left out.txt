@@ -1,0 +1,61 @@
+<!-- Topbar Start -->
+    <div class="container-fluid bg-primary py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white pr-3" href="https://www.ecstaticcleaners@gmail.com/ecstatic_cleaners">FAQs</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white px-3" href="https://www.ecstaticcleaners@gmail.com/ecstatic_cleaners">Help</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white pl-3" href="https://www.ecstaticcleaners@gmail.com/ecstatic_cleaners">Support</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white px-3" href="https://m.facebook.com/ecstaticcleaners">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-3" href="https://wa.me/message/4PEH5J7XS35QP1">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a class="text-white px-3" href="https://www.instagram.com/ecstatic_cleaners/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="ecstaticcleaners.com.ng" class="navbar-brand">
+                   
+                   <img class="align-items-center" src="img/drop logo.jpg" width="30px; height:20px; padding: 12px; margin-bottom: -50px; z-index: 1;"> <img class="align-items-center" src="img/ecs.jpg" width="300px; height:150px; padding: 12px; margin-bottom: 0px; z-index: 1;">
+                
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="Home.html" class="nav-item nav-link active">Home</a>
+                        <a href="general_cleaning.html" class="nav-item nav-link">Cleaning</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="pricing.html" class="nav-item nav-link">Pricing</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                       
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    ..................................................................................................................................................................................
