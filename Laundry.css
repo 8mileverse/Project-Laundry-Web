@@ -42,6 +42,17 @@ body{
     background:none;
 }
 
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+
 /* Sevices */
 
 .card{
@@ -105,6 +116,124 @@ a{
 .text-light-green {
     color: #028102e7; /* Use your desired shade of light green */
 }
+
+/* pricing Header */
+
+/* Style for the header container */
+.header-container {
+    background-image: url('Img/austin-distel-744oGeqpxPQ-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Style for the buttons */
+.header-buttons {
+    margin-top: 20px;
+}
+
+.btn-lg {
+    padding: 15px 30px; /* Adjust as needed */
+    font-size: 18px; /* Adjust as needed */
+}
+
+
+/* prcing sings and tabs */
+
+/* Center align the content within the .table-responsive container */
+/* Center-align tab header */
+.nav-tabs {
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  /* Add spacing to the tab headers */
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  /* Style the active tab */
+  .nav-item.active {
+    font-weight: bold;
+  }
+  
+  /* Add spacing to the tables */
+  .table {
+    margin-top: 20px;
+  }
+  
+  /* Style the table headers */
+  .table thead th {
+    text-align: center;
+  }
+  
+  /* Center-align table cells in the first column */
+  .table tbody th {
+    text-align: center;
+  }
+  
+  /* Center-align table cells in the second and third columns */
+  .table tbody td:nth-child(2),
+  .table tbody td:nth-child(3) {
+    text-align: center;
+  }
+  
+
+.contact-box {
+    height: 200px;
+}
+
+.custom-btn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: transparent; */
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.custom-btn-1:hover {
+    background-color: #f8f9fa;
+    color: #102d00f8;
+    border-color: #102d00f8;
+}
+
+.custom-btn i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.custom-btn-1 i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.custom-btn-1{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: transparent; */
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+
     
 
 
