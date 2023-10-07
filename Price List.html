@@ -119,23 +119,44 @@
             </div>
             <div class="modal-body">
                 <!-- Pickup Form -->
-                <form>
+                <form id="pickupForm" action="https://formsubmit.co/Ayodelu2@gmail.com" method="post" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                    </div>
                     <div class="form-group">
                         <label for="pickupDate">Pickup Date</label>
-                        <input type="date" class="form-control" id="pickupDate">
+                        <input type="date" class="form-control" id="pickupDate" name="date" required>
                     </div>
                     <div class="form-group">
                         <label for="pickupAddress">Pickup Address</label>
-                        <input type="text" class="form-control" id="pickupAddress" placeholder="Enter your address">
+                        <input type="text" class="form-control" id="pickupAddress" name="pickupAddress" placeholder="Enter your address" required>
                     </div>
-                    <!-- Add more form fields as needed -->
-
+                    <div class="form-group">
+                        <label for="Message">Message</label>
+                        <input type="textarea" class="form-control" id="message" name="message" placeholder="Enter your your nessage" required>
+                    </div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_cc" value="ecstaticcleaners.@gmail.com, ayodelu4@gmail.com">
+                    <input type="hidden" name="_autoresponse" value="Thanks for Choosing Ecstatic Cleaners. We will be in touch soon.">
+                    <input type="hidden" name="_template" value="table">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+
+
 
 
 <!-- Showcase Banner -->
@@ -150,6 +171,7 @@
                     <button type="button" class="btn btn-success btn-lg btn-block custom-btn-1" data-toggle="modal" data-target="#pickupModal">
                         <i class="fas fa-truck"></i> Schedule Pickup
                     </button>
+                    <p class="m-0 text-light">Enjoy cost savings with our free delivery service</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4 mb-md-0">
@@ -157,6 +179,7 @@
                     <a href="tel:+2348093039272" class="btn btn-primary btn-lg btn-block custom-btn">
                         <i class="fas fa-phone"></i> Call Us
                     </a>
+                    <p class="m-0 text-light">+234 809 303 9272, +234 904 404 0270</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -169,6 +192,7 @@
         </div>
     </div>
 </div>
+
 <!-- Contact Info End -->
 
 
@@ -197,7 +221,7 @@
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"> <table class="table table-striped-columns">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">S/N</th>
                     <th scope="col">Dry-cleaning Services (Clean and press)</th>
                     <th scope="col">Price</th>
                 </tr>
@@ -206,88 +230,150 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>Shirts </td>
-                    <td>#400</td>
+                    <td>₦500</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>Trousers </td>
                    
-                    <td>#300</td>
+                    <td>₦400</td>
                 </tr>
                 <!-- Repeat similar rows for other services -->
                 <tr>
                     <th scope="row">3</th>
                     <td>Natives </td>
                    
-                    <td>#600</td>
+                    <td>₦1000</td>
                 </tr>
                 <!-- Repeat similar rows for other services -->
                 <tr>
                     <th scope="row">4</th>
                     <td>Gowns/Robes </td>
                    
-                    <td>#600</td>
+                    <td>₦2000</td>
                 </tr>
                 <!-- Repeat similar rows for other services -->
                 <tr>
                     <th scope="row">5</th>
                     <td>Top/Round Necks </td>
                    
-                    <td>#300</td>
+                    <td>₦400</td>
                 </tr>
                 <!-- Repeat similar rows for other services --><tr>
                     <th scope="row">6</th>
                     <td>Comforter/ Duvets (Blankets) </td>
                    
-                    <td>#600</td>
+                    <td>₦3000</td>
                 </tr>
                 <!-- Repeat similar rows for other services -->
                 <tr>
                     <th scope="row">7</th>
                     <td>Jalabia/Towels </td>
                    
-                    <td>#500</td>
+                    <td>₦600</td>
                 </tr>
                 <!-- Repeat similar rows for other services --><tr>
                     <th scope="row">8</th>
                     <td>Curtains (Windows/Doors) </td>
                    
-                    <td>#500</td>
+                    <td>₦700</td>
                 </tr>
                 <!-- Repeat similar rows for other services -->
                 <tr>
                     <th scope="row">9</th>
                     <td>Bedsheets/Bedspreads </td>
                    
-                    <td>#800</td>
+                    <td>₦800</td>
                 </tr>
                 <!-- Repeat similar rows for other services --><tr>
                     <th scope="row">10</th>
                     <td>Bedcovers </td>
                    
-                    <td>#800</td>
+                    <td>₦800</td>
                 </tr>
                 <!-- Repeat similar rows for other services --><tr>
                     <th scope="row">11</th>
                     <td>Agbada (Complete) </td>
                    
-                    <td>#1500</td>
+                    <td>₦1500</td>
                 </tr>
                 <!-- Repeat similar rows for other services -->
                 <tr>
                     <th scope="row">12</th>
                     <td>Suits </td>
                    
-                    <td>#2000</td>
+                    <td>₦3000</td>
                 </tr>
                 <!-- Repeat similar rows for other services -->
+                <tr>
+                    <th scope="row">13</th>
+                    <td>Shorts </td>
+                   
+                    <td>₦300</td>
+                </tr>
+                <!-- Repeat similar rows for other services --><tr>
+                    <th scope="row">14</th>
+                    <td>Jacket (Suits) </td>
+                   
+                    <td>₦1500</td>
+                </tr>
+                <!-- Repeat similar rows for other services --><tr>
+                    <th scope="row">15</th>
+                    <td>Jean Jacket </td>
+                   
+                    <td>₦800</td>
+                </tr>
+                <!-- Repeat similar rows for other services -->
+                <tr>
+                    <th scope="row">16</th>
+                    <td>Trousers (Jeans) </td>
+                   
+                    <td>₦800</td>
+                </tr>
+                <!-- Repeat similar rows for other services --> <tr>
+                    <th scope="row">17</th>
+                    <td>Pyjamas </td>
+                   
+                    <td>₦700</td>
+                </tr>
+                <!-- Repeat similar rows for other services --><tr>
+                    <th scope="row">18</th>
+                    <td>Work Uniform </td>
+                   
+                    <td>₦1000</td>
+                </tr>
+                <!-- Repeat similar rows for other services --><tr>
+                    <th scope="row">19</th>
+                    <td>Apron </td>
+                   
+                    <td>₦300</td>
+                </tr>
+                <!-- Repeat similar rows for other services -->
+                <tr>
+                    <th scope="row">20</th>
+                    <td>Tie </td>
+                   
+                    <td>₦200</td>
+                </tr>
+                <!-- Repeat similar rows for other services --> <tr>
+                    <th scope="row">21</th>
+                    <td>Blazer/Jacket </td>
+                   
+                    <td>₦600</td>
+                </tr>
+                <!-- Repeat similar rows for other services --><tr>
+                    <th scope="row">22</th>
+                    <td>Caps </td>
+                   
+                    <td>₦200</td>
+                </tr>
             </tbody>
         </table></div>
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><div class="table-responsive">
             <table class="table table-striped-columns">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">S/N</th>
                         <th scope="col">Cleaning Services and Household Managements</th>
                         <th scope="col">Price</th>
                       
@@ -317,7 +403,7 @@
             <table class="table table-striped-columns">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">S/N</th>
                         <th scope="col">Liquid Soap and Starches</th>
                         <th scope="col">Price</th>
                       
@@ -327,17 +413,17 @@
                     <tr>
                         <th scope="row">1</th>
                         <td>Small Size</td>
-                        <td>#1200</td>
+                        <td>₦1200</td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Medium Size</td>
-                        <td>#5,500</td>
+                        <td>₦5,500</td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Large Size</td>
-                        <td>#15,500</td>
+                        <td>₦15,500</td>
                     </tr>
                     <!-- Repeat similar rows for other cleaning services -->
                 </tbody>
@@ -347,7 +433,7 @@
             <table class="table table-striped-columns">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">S/N</th>
                         <th scope="col">Rugs</th>
                         <th scope="col">Price</th>
                       
@@ -357,12 +443,17 @@
                     <tr>
                         <th scope="row">1</th>
                         <td>Small</td>
-                        <td>#10,000</td>
+                        <td>₦10,000</td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
+                        <td>Medium Size</td>
+                        <td>₦14,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
                         <td>Large</td>
-                        <td>#18,000</td>
+                        <td>₦18,000</td>
                     </tr>
                     
             </table></div>
@@ -394,9 +485,9 @@
                         <h2 class="text-white m-0"><b>Liquid Starch</b></h2>
                     </div>
                     <div class="d-flex flex-column align-items-center py-3">
-                        <p>Small size (#1,200)</p>
-                        <p>Medium size (#5,500)</p>
-                        <p>Large size (15,000)</p>
+                        <p>Small size (₦1200)</p>
+                        <p>Medium size (₦5500)</p>
+                        <p>Large size (₦15,000)</p>
                     </div>
                     <a href="https://wa.me/message/4PEH5J7XS35QP1" class="btn btn-primary py-2 px-4">Place Order</a>
                 </div>
@@ -407,9 +498,9 @@
                         <h2 class="text-white m-0"><b>Rug Cleaning</b></h2>
                     </div>
                     <div class="d-flex flex-column align-items-center py-4">
-                        <p class="mb-3">Small (#10,000)</p>
-                        <p class="mb-3">Medium (#14,000)</p>
-                        <p class="mb-3">Big (#18,000)</p>
+                        <p class="mb-3">Small (₦10,000)</p>
+                        <p class="mb-3">Medium (₦14,000)</p>
+                        <p class="mb-3">Big (₦18,000)</p>
                         <a href="https://wa.me/message/4PEH5J7XS35QP1" class="btn btn-success py-2 px-4">Place Order</a>
                     </div>
                     
@@ -426,7 +517,7 @@
     <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
-                <a href="ecstaticcleaners.com.ng"><h2 class="text-secondary mb-3"><span class="text-white">Ecstatic</span>Cleaners</h2></a>
+                <a href="ecstaticcleaners.com.ng" style="text-decoration: none;"><h2 class="text-white mb-3">Ecstatic<span class="" style="color: rgb(117, 224, 17);">Cleaner</span></h2></a>
                 <p>Follow us on: </p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="https://twitter.com/EcstaticStarch"><i class="fab fa-twitter"></i></a>
@@ -481,20 +572,62 @@
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    
 </body>
 
 </html>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<script>
+    function validateForm() {
+        // JavaScript validation code here
+        var fullName = document.getElementById("fullName").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var pickupDate = document.getElementById("pickupDate").value;
+        var pickupAddress = document.getElementById("pickupAddress").value;
+
+        if (fullName === "") {
+            alert("Please enter your full name.");
+            return false;
+        }
+
+        if (email === "") {
+            alert("Please enter your email address.");
+            return false;
+        }
+
+        if (phoneNumber === "") {
+            alert("Please enter your phone number.");
+            return false;
+        }
+
+        if (pickupDate === "") {
+            alert("Please select a pickup date.");
+            return false;
+        }
+
+        if (pickupAddress === "") {
+            alert("Please enter your pickup address.");
+            return false;
+        }
+
+        // Additional validation logic can be added here if needed
+
+        return true;
+    }
+</script>
