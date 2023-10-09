@@ -261,6 +261,16 @@ a{
     color: #fff; /* Set the text color to white */
 }
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
 
 /* Style for the buttons */
 .header-buttons {
