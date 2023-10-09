@@ -161,16 +161,16 @@
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="contact-box bg-primary text-white p-4 text-center rounded">
-                        <a href="mailto:ecstaticcleaners@gmail.com" style="text-decoration: none; color: white;">
-                            <i class="fas fa-envelope fa-3x mb-3"></i>
-                            <h5 class="font-weight-light">Email Us</h5>
-                            <p class="m-0">ecstaticcleaners@gmail.com</p>
-                        </a>
+                        <i class="fas fa-envelope fa-3x mb-3"></i>
+                        <h5 class="font-weight-light">Email Us</h5>
+                        <p class="m-0">ecstaticcleaners@gmail.com</p>
                     </div>
                 </div>
+                
+                
                 <div class="col-md-4">
                     <div class="contact-box bg-success text-white p-4 text-center rounded">
-                        <a href="tel:+2348093039272, +2349044040270" style="text-decoration: none; color: white;">
+                        <a href="tel:+2348093039272" style="text-decoration: none; color: white;">
                             <i class="fas fa-phone-alt fa-3x mb-3"></i>
                             <h5 class="font-weight-light">Call Us</h5>
                             <p class="m-0">+234 809 303 9272</p>
@@ -458,16 +458,14 @@
             
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white mb-4">Send us an E-mail.</h4>
-                <form action="">
+                <form id="contactForm">
                     <div class="form-group">
-                        <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required">
                     </div>
-                    <div>
-                        <button class="btn btn-lg btn-secondary btn-block border-0" type="submit"><a href="https://www.ecstaticcleaners.@gmail.com" style="text-decoration: none;" class="text-white">Submit Now</a></button>
-                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit</button>
                 </form>
             </div>
         </div>
@@ -516,3 +514,31 @@
  
      <!-- Template Javascript -->
      <script src="js/main.js"></script>
+
+     <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            // Get user input from the form
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            // Construct the WhatsApp message
+            const message = `Hi, my name is ${name}. My email is ${email}. I have a question.`;
+
+            // Encode the message for a WhatsApp URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Replace the phone number with the recipient's number
+            const phoneNumber = "+234 809 303 9272"; // Replace with your recipient's phone number
+
+            // Create the WhatsApp URL
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL);
+
+            // Reset the form
+            document.getElementById("contactForm").reset();
+        });
+    </script>

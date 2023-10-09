@@ -161,7 +161,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100 text-center">
                     <div class="card-body">
-                        <div class="mb-4">
+                        <div class="mt-4">
                             <img src="Img/society.gif" alt="" srcset="" >
                         </div>
                         <h5 class="card-title mt-4">Experienced Team</h5>
@@ -172,7 +172,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100 text-center">
                     <div class="card-body">
-                        <div class="mb-4">
+                        <div class="mt-4">
                             <img src="Img/recycling.gif" alt="" srcset="">
                         </div>
                         <h5 class="card-title mt-4">Eco-Friendly Cleaning</h5>
@@ -183,7 +183,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100 text-center">
                     <div class="card-body">
-                        <div class="mb-4">
+                        <div class="mt-4">
                             <img src="Img/customer.gif" alt="" srcset="" >
                         </div>
                         <h5 class="card-title mt-4">Customer Satisfaction</h5>
@@ -199,8 +199,8 @@
 
 
     
-   <!-- Footer Start -->
-   <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
+  <!-- Footer Start -->
+  <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
     <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-5">
             <a href="ecstaticcleaners.com.ng" style="text-decoration: none;"><h2 class="text-white mb-3">Ecstatic<span class="" style="color: rgb(117, 224, 17);">Cleaner</span></h2></a>
@@ -234,16 +234,14 @@
         
         <div class="col-lg-3 col-md-6 mb-5">
             <h4 class="text-white mb-4">Send us an E-mail.</h4>
-            <form action="">
+            <form id="contactForm">
                 <div class="form-group">
-                    <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required="required">
                 </div>
-                <div>
-                    <button class="btn btn-lg btn-secondary btn-block border-0" type="submit"><a href="https://www.ecstaticcleaners.@gmail.com" style="text-decoration: none;" class="text-white">Submit Now</a></button>
-                </div>
+                <button type="submit" class="btn btn-secondary">Submit</button>
             </form>
         </div>
     </div>
@@ -256,24 +254,67 @@
 <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/waypoints/waypoints.min.js"></script>
+ <script src="lib/counterup/counterup.min.js"></script>
+ <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+ <!-- Contact Javascript File -->
+ <script src="mail/jqBootstrapValidation.min.js"></script>
+ <script src="mail/contact.js"></script>
+
+ <!-- Template Javascript -->
+ <script src="js/main.js"></script>
+
+ <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        // Get user input from the form
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        // Construct the WhatsApp message
+        const message = `Hi, my name is ${name}. My email is ${email}. I have a question.`;
+
+        // Encode the message for a WhatsApp URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // Replace the phone number with the recipient's number
+        const phoneNumber = "+234 809 303 9272"; // Replace with your recipient's phone number
+
+        // Create the WhatsApp URL
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappURL);
+
+        // Reset the form
+        document.getElementById("contactForm").reset();
+    });
+</script>
